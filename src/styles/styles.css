@@ -15,7 +15,7 @@ h1{
 }
 
 h4{
-    font-weight: 600; /*Make the text bold*/
+    font-weight: 500; /*Make the text bold*/
 }
 
 body{
@@ -23,11 +23,13 @@ body{
     align-items: center; /*Align the items towards the center*/
     justify-content: center; /*Justify the content towards the center, as in, horizontal centering*/
     flex-direction: column; /*Display the items in a column*/
+    width: 50vw; /*Set the width of the site to 50 percent of the screens width*/
+    margin: auto;
 
 }
 
 main{
-    width: 50vw; /*Set the width of the main element to 80 percent of the screens width*/
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,6 +42,15 @@ footer{
     justify-content: center;
     flex-direction: column;
     margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+footer>div{ /*Adds styles for the links in the footer*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap; /*Tells the browser to wrap the content*/
 }
 
 a{
@@ -50,14 +61,64 @@ a{
     padding: 8px; /*Add 8 pixels of padding between the corners of the element and the content of it to make it feel less cramped*/
     margin: 4px; /*Adds 4 pixels of margin, as in, blank space around the element to space other items apart*/
     text-decoration: none; /*Removes the underline from the link now that they look like buttons*/
+    transition: 0.2s linear background-color; /*Add a transition when someone hovers over the button*/
 }
 
 a:hover{
     background-color: rgb(178, 178, 178); /*When someone hovers over the link, make the background color darker*/
+    transition: 0.2s linear all;
+    color: black;
 }
 
-@media only screen and (max-width: 600px) { /*When the users screen is smaller than 600px (as in, for phones), make the width of the main element 80% of the sceeens width*/
-    main {
+/*Classes, as in class=(name) in HTML, are refered to in CSS using a full stop (.)
+Multiple elemenrs can share the same class name if you'd like to.
+
+However, if you were to use IDs, as in id=(name) in HTML, yoou can't have two ids with the same name on one page. 
+IDs are refered to using hashtags (#) in CSS.
+
+.classname{
+code goes here
+}
+
+#idname{
+code goes here
+}
+
+
+*/
+
+.twitter{
+    background-color: #008AD8;
+    color: white;
+}
+
+.instagram{
+    background-color: #F56040;
+    color: white;
+}
+
+.substack{
+    background-color: #FF6719;
+    color: white;
+}
+
+.airchat{
+    background-color: #3170e7;
+    color: white;
+}
+
+.youtube{
+    background-color: #FF0000;
+    color: white;
+}
+
+.twitch{
+    background-color: #6441a5;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) { /*When the users screen is smaller than 600px (as in, for phones), make the width of the site 80% of the sceeens width*/
+    body {
       width: 80vw;
     }
   }
