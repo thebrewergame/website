@@ -1,18 +1,38 @@
-<center>
-<h1>Hey there, I'm Matthew.</h1>
-<p>It's great to meet you. From a young age, I've always had a fascination with writing, technology, hospitality and service, and public speaking. Over the years, I've done a number of things and developed a number of interests along the way. When I was younger, I made Roblox YouTube videos on a little channel called Brewer Studios, and now, I spend a great amount of time on the world's stage of social media and learning the ways of creatives in the graphic, user interface, and user experience design, photography, and marketing industries. I've picked up interests in voice acting and radio DJing, and I thoroughly enjoy exploring and capturing the beauty of the world through my photography and writing.</p>
-<p>
-    <a href="mailto:hello@thebrewergame.com">Say hi, or get in touch</a>
-</p>
-<hr>
-<h4>Find me elsewhere across the internet:</h4>
-<p>
-    <a href="https://x.com/thebrewergame">X (formerly Twitter)</a>
-</p>
-<p>
-    <a href="https://www.air.chat/brewer">Airchat</a>
-</p>
-<p>
-    <a href="https://www.instagram.com/thebrewergame">Instagram</a>
-</p>
-</center>
+<!DOCTYPE html> <!--Lets the browser know what file this this-->
+<html> <!--Tells the browser where the HTML starts and ends (as in, the whole page for now)-->
+
+<head> <!--A head contains information for the browser, like setting tab titles or linking CSS files. This is not visibale for the user.-->
+    <title>Mattew Brewer</title> <!--Sets the websites title, which is visible in the tab-->
+    <link rel="stylesheet" href="/src/styles/styles.css"> <!--Links a file, in this case, as CSS file which will be used as a stylesheet-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> <!--Set the viewport (screen) to 1x scale-->
+</head>
+
+<body> <!--A body is the actual content of the site. Anything here will be vivible for the end user-->
+    <header> <!--Headers have buttons, naviagions, icons and similar. If you plan to add multiple pages, link them here-->
+        <h1>Hey there, I'm Matthew.</h1>
+    </header>
+    <main> <!--Main contains the main content a person is looking for-->
+        <p>It's great to meet you. From a young age, I've always had a fascination with writing, technology, hospitality and
+            service, and public speaking. Over the years, I've done a number of things and developed a number of interests along
+            the way. When I was younger, I made Roblox YouTube videos on a little channel called Brewer Studios, and now, I
+            spend a great amount of time on the world's stage of social media and learning the ways of creatives in the graphic,
+            user interface, and user experience design, photography, and marketing industries. I've picked up interests in voice
+            acting and radio DJing, and I thoroughly enjoy exploring and capturing the beauty of the world through my
+            photography and writing.</p>
+        <a href="mailto:hello@thebrewergame.com">Say hi, or get in touch</a>
+    </main>
+    <footer> <!--Footers contains links too, but they're at the bottom of all content-->
+        <hr>
+        <h4>Find me elsewhere across the internet:</h4>
+        <div> <!--Put the links in a seperate container, that way we can align them in a row. Target=_blank rel noopener opens the link in a new tab.-->
+            <a href="https://x.com/thebrewergame" target="_blank" rel="noopener">X (formerly Twitter)</a>
+            <a href="https://www.air.chat/brewer" target="_blank" rel="noopener">Airchat</a>
+            <a href="https://www.instagram.com/thebrewergame" target="_blank" rel="noopener">Instagram</a>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+<!--Links (a tags) should not be wrapped in a paragraph (p tag)-->
+<!--The <center> tag is deprecated, CSS should be used instead-->
