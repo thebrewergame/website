@@ -1,0 +1,49 @@
+Hi there! This is the text file of all of the spare bits of code for the thebrewergame/websites GitHub repo, the source code of the website thebrewergame.com. The documentation below covers a variety of things around the website.
+
+SOCIAL COLOR BUTTONS
+Social Color Buttons refers to whether or not the social platform buttons underneath the header "Find me elsewhere across the internet:" are colored with their respective platform colors. To achieve the coloring, src/styles/styles.css includes HTML classes for each of the platforms with their respective background colors, at the bottom of the file. Then, index.html calls on these classes through the [class="[class name]"] portion of the links just before the associated platform name. Below is an example of the X (formerly Twitter) button without the coloring:
+
+
+<a href="https://x.com/thebrewergame" target="_blank" rel="noopener">X (formerly Twitter)</a>
+
+
+...versus with, as introduced in thebrewergame.com v1.8:
+
+
+<a href="https://x.com/thebrewergame" target="_blank" rel="noopener" class="twitter">X (formerly Twitter)</a>
+
+
+It is that [class="twitter"] that calls the respective HTML classes. To remove the coloring, you may either remove the [class="[class name]"] parts of the links in index.html, or remove the classes themselves in src/styles/styles.css, which look like the following as of thebrewergame.com v1.8:
+
+
+.twitter{
+    background-color: #008AD8;
+    color: white;
+}
+
+.instagram{
+    background-color: #F56040;
+    color: white;
+}
+
+.substack{
+    background-color: #FF6719;
+    color: white;
+}
+
+.airchat{
+    background-color: #3170e7;
+    color: white;
+}
+
+.youtube{
+    background-color: #FF0000;
+    color: white;
+}
+
+.twitch{
+    background-color: #6441a5;
+    color: white;
+}
+
+In the case of thebrewergame.com/website, we keep the classes in src/styles/styles.css, and instead just remove the [class="[class name]"] from the links.
