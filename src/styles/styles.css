@@ -14,6 +14,35 @@ h1{
     font-weight: 600; /*Make the text bold*/
 }
 
+button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap; /*Tells the browser to wrap the content*/
+}
+
+button {
+    color: black;
+    background-color: rgb(218, 218, 218);
+    border-radius: 8px; /*Makes the buttons round*/
+    text-align: center; /*Aligns text to the ceneter. Avoid center aligned text for paragraphs. They're mainly used for buttons*/
+    padding: 3px; /*Add 8 pixels of padding between the corners of the element and the content of it to make it feel less cramped*/
+    margin: 0px; /*Adds 4 pixels of margin, as in, blank space around the element to space other items apart*/
+    text-decoration: none; /*Removes the underline from the link now that they look like buttons*/
+    transition: 0.2s linear background-color; /*Add a transition when someone hovers over the button*/
+    border:none;
+    font-family: Jost, sans-serif;
+    font-size: 1em;
+}
+
+button:hover { 
+    cursor:pointer;
+    background-color: rgb(178, 178, 178); /*When someone hovers over the link, make the background color darker*/
+    transition: 0.2s linear all;
+    color: black;
+}
+
 h4{
     font-weight: 500; /*Make the text bold*/
 }

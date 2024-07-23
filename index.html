@@ -13,6 +13,7 @@
         <h1>Hey there, I'm Matthew.</h1>
     </header>
     <main> <!--Main contains the main content a person is looking for-->
+        <img src="/src/images/Jet Lag Outdoor Portrait.jpg" alt="A photo of Matthew Brewer outside, up against a tree, wearing a blue hoodie and black t-shirt underneath a navy and red vest, and a blue and orange hat with a colored Jet Lag: The Game logo. The background is blurred, and Matthew's glasses are tinted." width="350" height="450">
         <p>It's great to meet you. From a young age, I've always had a fascination with writing, technology, hospitality and
             service, and public speaking. Over the years, I've done a number of things and developed a number of interests along
             the way. When I was younger, I made Roblox YouTube videos on a little channel called Brewer Studios, and now, I
@@ -20,17 +21,18 @@
             user interface, user experience design, photography, and marketing industries. I've picked up interests in voice
             acting and radio DJing, and I thoroughly enjoy exploring and capturing the beauty of the world through my
             photography and writing.</p>
-        <a href="mailto:hello@thebrewergame.com">Say hi, or get in touch</a>
+        <a href="mailto:hello@thebrewergame.com">Say hi, or get in touch via email</a>
+        <button type=button onclick="copyEmail()">(or click to copy hello@thebrewergame.com)</button>
     </main>
     <footer> <!--Footers contains links too, but they're at the bottom of all content-->
-        <hr>
+        <br>
         <h4>Find me elsewhere across the internet:</h4>
         <div> <!--Put the links in a separate container, that way we can align them in a row. Target=_blank rel noopener opens the link in a new tab.-->
             <a href="https://x.com/thebrewergame" target="_blank" rel="noopener">X (formerly Twitter)</a>
-            <a href="https://www.instagram.com/thebrewergame" target="_blank" rel="noopener">Instagram</a>
-            <a href="https://thebrewergame.substack.com" target="_blank" rel="noopener">Substack</a>
             <a href="https://www.air.chat/brewer" target="_blank" rel="noopener">Airchat</a>
             <a href="https://beta.chirpsocial.net/user?id=brewer" target="_blank" rel="noopener">Chirp</a>
+            <a href="https://www.instagram.com/thebrewergame" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://thebrewergame.substack.com" target="_blank" rel="noopener">Substack</a>
             <a href="https://www.youtube.com/@thebrewergame" target="_blank" rel="noopener">YouTube</a>
             <a href="https://www.twitch.tv/thebrewergame" target="_blank" rel="noopener">Twitch</a>
         </div>
@@ -38,6 +40,12 @@
 </body>
 
 </html>
+
+<script>
+function copyEmail() {
+    navigator.clipboard.writeText("hello@thebrewergame.com");
+}
+</script>
 
 <!--Links (a tags) should not be wrapped in a paragraph (p tag)-->
 <!--The <center> tag is deprecated, CSS should be used instead-->
