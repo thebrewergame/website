@@ -99,6 +99,32 @@ a:hover{
     color: black;
 }
 
+.announcement-banner {
+  width: 50vw;
+  height: 30vh;
+  border:none; /*2px solid black;*/
+  padding: 8px;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 0px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap; /*Tells the browser to wrap the content*/
+  border-radius: 8px;
+  background-color: rgb(237,237,237);
+  display: none; /*Controls showing and hiding the announcement banner. Comment out to show the announcement banner.*/
+}
+
+h2 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
 /*Classes, as in class=(name) in HTML, are refered to in CSS using a full stop (.)
 Multiple elemenrs can share the same class name if you'd like to.
 
@@ -149,5 +175,12 @@ code goes here
 @media only screen and (max-width: 600px) { /*When the users screen is smaller than 600px (as in, for phones), make the width of the site 80% of the sceeens width*/
     body {
       width: 80vw;
+    }
+
+    .announcement-banner {
+
+        width: 80vw;
+        height: 50vh;
+        
     }
   }

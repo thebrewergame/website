@@ -1,7 +1,7 @@
 Hi there! This is the text file of all of the spare bits of code for the thebrewergame/websites GitHub repo, the source code of the website thebrewergame.com. The documentation below covers a variety of things around the website.
 
-SOCIAL COLOR BUTTONS
-Social Color Buttons refers to whether or not the social platform buttons underneath the header "Find me elsewhere across the internet:" are colored with their respective platform colors. To achieve the coloring, src/styles/styles.css includes HTML classes for each of the platforms with their respective background colors, at the bottom of the file. Then, index.html calls on these classes through the [class="[class name]"] portion of the links just before the associated platform name. Below is an example of the X (formerly Twitter) button without the coloring:
+SOCIAL COLOR LINKS
+Social Color Links refers to whether or not the social platform links underneath the header "Find me elsewhere across the internet:" are colored with their respective platform colors. To achieve the coloring, src/styles/styles.css includes HTML classes for each of the platforms with their respective background colors, at the bottom of the file. Then, index.html calls on these classes through the [class="[class name]"] portion of the links just before the associated platform name. Below is an example of the X (formerly Twitter) button without the coloring:
 
 
 <a href="https://x.com/thebrewergame" target="_blank" rel="noopener">X (formerly Twitter)</a>
@@ -47,3 +47,10 @@ It is that [class="twitter"] that calls the respective HTML classes. To remove t
 }
 
 In the case of thebrewergame.com/website, we keep the classes in src/styles/styles.css, and instead just remove the [class="[class name]"] from the links.
+
+ANNOUNCEMENT BANNER
+The Announcement Banner is an element of the website intended to be placed underneath the social links that can draw attention to something, say, well, an announcement. It features a header, paragraph, and space for links. It can be found just underneath the code for the social links, identifiable as the HTML class "announcement-banner." To take the banner live, fill the content as approperiate, remove the tags around the above <br> making it a comment, and in styles.css, find .announcement-banner and remove or switch to a comment the "display: none;". Then the banner is up and running! For reference, this is the default content for it when unused to say hi to the sneaky people using Inspect Element:
+
+the header (h2): Shhh...
+the paragraph (p): If you're reading this, it means that you're poking around where you shouldn't be. This surrounding code is for a hidden announcement banner to go at the bottom of the site that I'm not currently using. Now get out of Inspect Element!
+the links: honestly whatever is leftover from the previous announcement. or, if you'd prefer, the first time around was the same link to my X, except labeled as "Secret X (formerly Twitter) link".
