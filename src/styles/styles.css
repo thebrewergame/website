@@ -115,7 +115,7 @@ a:hover{
   flex-wrap: wrap; /*Tells the browser to wrap the content*/
   border-radius: 8px;
   background-color: rgb(237,237,237);
-  display: none; /*Controls showing and hiding the announcement banner. Comment out to show the announcement banner.*/
+  display: none;
 }
 
 h2 {
