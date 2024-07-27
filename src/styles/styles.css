@@ -178,9 +178,11 @@ code goes here
     }
 
     .announcement-banner {
-
         width: 80vw;
         height: 50vh;
-        
+    }
+
+    button{
+        display: none;
     }
   }
