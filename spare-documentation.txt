@@ -76,3 +76,11 @@ The Announcement Banner is an element of the website intended to be placed under
 the header (h2): Shhh...
 the paragraph (p): If you're reading this, it means that you're poking around where you shouldn't be. This surrounding code is for a hidden announcement banner to go at the bottom of the site that I'm not currently using. Now get out of Inspect Element!
 the links: honestly whatever is leftover from the previous announcement. or, if you'd prefer, the first time around was the same link to my X, except labeled as "Secret X (formerly Twitter) link".
+
+For reference, the links can be inserted by adding this just underneath the announcement blurb (with the paragraph tags):
+
+
+<br>
+    <div>
+        <a href="https://x.com/thebrewergame" target="_blank" rel="noopener">Secret X (formerly Twitter) link</a>
+    </div>
