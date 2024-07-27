@@ -22,7 +22,7 @@
             acting and radio DJing, and I thoroughly enjoy exploring and capturing the beauty of the world through my
             photography and writing.</p>
         <a href="mailto:hello@thebrewergame.com">Say hi, or get in touch via email</a>
-        <button type=button onclick="copyEmail()">(or click to copy hello@thebrewergame.com)</button>
+        <button type=button id="emailButton" onclick="copyEmail()">(or click to copy hello@thebrewergame.com)</button>
     </main>
     <footer> <!--Footers contains links too, but they're at the bottom of all content-->
         <br>
@@ -54,6 +54,17 @@
 function copyEmail() {
     navigator.clipboard.writeText("hello@thebrewergame.com");
 }
+
+function resetEmailButton() {
+    emailButton.textContent = "(or click to copy hello@thebrewergame.com)";
+}
+
+const emailButton = document.getElementById("emailButton");
+emailButton.addEventListener("click", function() {
+    emailButton.textContent = "hello@thebrewergame.com has been copied to the clipboard!";
+    setTimeout(resetEmailButton, 5000);
+});
+
 </script>
 
 <!--Links (a tags) should not be wrapped in a paragraph (p tag)-->

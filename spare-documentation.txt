@@ -1,4 +1,26 @@
-Hi there! This is the text file of all of the spare bits of code for the thebrewergame/websites GitHub repo, the source code of the website thebrewergame.com. The documentation below covers a variety of things around the website.
+Hi there! This is the text file of all of the spare bits of code for the thebrewergame/websites GitHub repo, the source code of the website thebrewergame.com. The documentation below covers a variety of things around the website in descending order of appearance.
+
+ALTERNATE EMAIL COPY BUTTON FUNCTIONALITY
+Currently, the email copy button works by switching the text of the button once clicked for five seconds before reverting it back to the original text. However, this was not the first version of the implementation. The first version involved sending an alert to the browser that read "hello@thebrewergame.com has been copied to the clipboard!" This functionality can be used by replacing the code in the emailButton.addEventListener function at the bottom of index.html with the following:
+
+
+alert("hello@thebrewergame.com has been copied to the clipboard!");
+
+
+For reference, the current implementation is coded as follows:
+
+
+function resetEmailButton() {
+    emailButton.textContent = "(or click to copy hello@thebrewergame.com)";
+}
+
+emailButton.addEventListener("click", function() {
+    emailButton.textContent = "hello@thebrewergame.com has been copied to the clipboard!";
+    setTimeout(resetEmailButton, 5000);
+});
+
+
+("emailButton" is the ID of the copy email button.)
 
 SOCIAL COLOR LINKS
 Social Color Links refers to whether or not the social platform links underneath the header "Find me elsewhere across the internet:" are colored with their respective platform colors. To achieve the coloring, src/styles/styles.css includes HTML classes for each of the platforms with their respective background colors, at the bottom of the file. Then, index.html calls on these classes through the [class="[class name]"] portion of the links just before the associated platform name. Below is an example of the X (formerly Twitter) button without the coloring:
