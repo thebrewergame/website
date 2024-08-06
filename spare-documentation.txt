@@ -70,8 +70,8 @@ It is that [class="twitter"] that calls the respective HTML classes. To remove t
 
 In the case of thebrewergame.com/website, we keep the classes in src/styles/styles.css, and instead just remove the [class="[class name]"] from the links.
 
-ANNOUNCEMENT BANNER
-The Announcement Banner is an element of the website intended to be placed underneath the social links that can draw attention to something, say, well, an announcement. It features a header, paragraph, and space for links. It can be found just underneath the code for the social links, identifiable as the HTML class "announcement-banner." To take the banner live, fill the content as approperiate, remove the tags around the above <br> making it a comment, and in styles.css, find .announcement-banner and remove or switch to a comment the "display: none;". Then the banner is up and running! For reference, this is the default content for it when unused to say hi to the sneaky people using Inspect Element:
+ANNOUNCEMENT PANEL
+The Announcement Panel is an element of the website intended to be placed underneath the social links that can draw attention to something, say, well, an announcement. It features a header, paragraph, and space for links. It can be found just underneath the code for the social links, identifiable as the HTML class "announcement-panel." To take the panel live, fill the content as approperiate, remove the tags around the above <br> making it a comment, and in styles.css, find .announcement-panel and remove or switch to a comment the "display: none;". Then the banner is up and running! For reference, this is the default content for it when unused to say hi to the sneaky people using Inspect Element:
 
 the header (h2): Shhh...
 the paragraph (p): If you're reading this, it means that you're poking around where you shouldn't be. This surrounding code is for a hidden announcement banner to go at the bottom of the site that I'm not currently using. Now get out of Inspect Element!
