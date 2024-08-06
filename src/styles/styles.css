@@ -99,7 +99,7 @@ a:hover{
     color: black;
 }
 
-.announcement-panel {
+.announcement-banner {
   width: 50vw;
   height: 30vh;
   border:none; /*2px solid black;*/
@@ -177,7 +177,7 @@ code goes here
       width: 80vw;
     }
 
-    .announcement-panel {
+    .announcement-banner {
         width: 80vw;
         height: 50vh;
     }
