@@ -180,6 +180,7 @@ code goes here
     .announcement-panel {
         width: 80vw;
         height: 50vh;
+        display: none;
     }
 
     button{
