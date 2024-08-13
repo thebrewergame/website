@@ -14,7 +14,7 @@ h1{
     font-weight: 600; /*Make the text bold*/
 }
 
-button{
+button {
     display: flex;
     align-items: center;
     justify-content: center;
