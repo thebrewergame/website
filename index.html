@@ -28,13 +28,12 @@
             <a href="https://www.air.chat/brewer" target="_blank" rel="noopener">Airchat</a>
         </div>
         <!--<br>--> <!--Remove comment tags around <br> when taking the announcement banner live for proper spacing.-->
-        <div class="announcement-banner">
-            <h2>Shhh...</h2>
-            <p>If you're reading this, it means that you're poking around where you shouldn't be. This surrounding code is for a hidden announcement banner to go at the bottom of the site that I'm not currently using. Now get out of Inspect Element!</p>
-            <br>
-            <div>
-                <a href="mailto:hello@thebrewergame.com">Send an email</a>
-            </div>
+        <div class="announcementBanner">
+            <h2 id="announcementHeader">MATTHEW'S BIRTHDAY IS IN:</h2>
+            <p id="countdown"></p>
+            <!--<div>
+                <a href="mailto:hello@thebrewergame.com">Send a birthday wish by email</a>
+            </div>-->
         </div>
     </footer>
 </body>
@@ -42,6 +41,7 @@
 </html>
 
 <script>
+
 function copyEmail() {
     navigator.clipboard.writeText("hello@thebrewergame.com");
 }
@@ -55,6 +55,33 @@ emailButton.addEventListener("click", function() {
     emailButton.textContent = "Talk soon! hello@thebrewergame.com has been copied to the clipboard.";
     setTimeout(resetEmailButton, 5000);
 });
+
+var countdownDate = new Date("Dec 4, 2024 00:00:00").getTime();
+var countdownUpdater = setInterval(function() {
+    var countdownCurrentTime = new Date().getTime();
+    var countdownDifference = countdownDate - countdownCurrentTime;
+
+    var countdownDays = Math.floor(countdownDifference / (1000 * 60 * 60 * 24));
+    var countdownHours = Math.floor((countdownDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var countdownMinutes = Math.floor((countdownDifference % (1000 * 60 * 60)) / (1000 * 60));
+    var countdownSeconds = Math.floor((countdownDifference % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML = countdownDays + "d " + countdownHours + "h " + countdownMinutes + "m " + countdownSeconds + "s";
+
+    if (countdownDifference < 0) {
+        clearInterval(countdownCurrentTime);
+        document.getElementById("countdown").innerHTML = "TODAY! HAPPY BIRTHDAY, MATTHEW!";
+    }
+}, 1000);
+
+function MobileDeterminer() {
+    const userClient = navigator.userAgent;
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userClient);
+}
+
+if (MobileDeterminer()) {
+    document.getElementById("announcementHeader").textContent = "MATTHEW'S BDAY IN:"
+}
 
 </script>
 
