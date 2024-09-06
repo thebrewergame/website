@@ -126,6 +126,10 @@ h2 {
     padding-bottom: 0px;
 }
 
+.countdownStorage {
+    display: none;
+}
+
 /*Classes, as in class=(name) in HTML, are refered to in CSS using a full stop (.)
 Multiple elemenrs can share the same class name if you'd like to.
 
