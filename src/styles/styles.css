@@ -100,7 +100,7 @@ a:hover{
 }
 
 .announcementBanner {
-  width: 50vw;
+  width: 30vw; /*A value of 50 aligns the width with the blurb*/
   height: 15vh;
   border:none;
   padding: 8px;
