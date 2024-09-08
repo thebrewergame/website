@@ -7,7 +7,7 @@ Hi there! This repository is the source code for thebrewergame.com, developed by
 
 ### Additional URLs
 
-Both [matthewcbrewer.com](https://matthewcbrewer.com) and [matthewcmccaslin.com](https://matthewcmccaslin.com) redirect to thebrewergame.com. I bought both of these domains late at night, on a whim when my decision-making wasn't at its peak (also the story for thebrewergame.com, but that's beside the point!), so feel free to use them. At least they're a bit more personally professional than thebrewergame.com.
+Both [matthewcbrewer.com](https://matthewcbrewer.com) and [matthewcmccaslin.com](https://matthewcmccaslin.com) redirect to thebrewergame.com. I bought both of these domains late at night, on a whim when my decision-making wasn't at its peak (also the story for thebrewergame.com, but that's beside the point!), so feel free to use them. At least they're a bit more professional than thebrewergame.com.
 
 ## Special thanks
 
