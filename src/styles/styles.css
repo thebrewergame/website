@@ -22,7 +22,7 @@ button {
     flex-wrap: wrap; /*Tells the browser to wrap the content*/
 }
 
-button {
+.emailButton {
     color: black;
     background-color: rgb(218, 218, 218);
     border-radius: 8px; /*Makes the buttons round*/
@@ -36,7 +36,7 @@ button {
     font-size: 1em;
 }
 
-button:hover { 
+.emailButton:hover { 
     cursor:pointer;
     background-color: rgb(178, 178, 178); /*When someone hovers over the link, make the background color darker*/
     transition: 0.2s linear all;
@@ -120,6 +120,14 @@ a:hover{
 }
 
 h2 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+h5 {
+    font-weight: 400;
     margin-bottom: 0px;
     margin-top: 0px;
     padding-top: 0px;
