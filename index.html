@@ -31,7 +31,7 @@
         <div class="announcementBanner">
             <h5 id="announcementTagline">ANOTHER YEAR CLOSER TO DEATH</h5>
             <h2 id="announcementHeader">MATTHEW'S BIRTHDAY IS IN:</h2>
-            <p id="countdown"></p>
+            <p id="announcementContent"></p>
             <div id="announcementActions">
                 
             </div>
@@ -58,6 +58,7 @@ emailButton.addEventListener("click", function() {
 });
 
 var countdownDate = new Date("Dec 4, 2024 00:00:00").getTime();
+var countdownElement = document.getElementById("announcementContent")
 var countdownUpdater = setInterval(function() {
     var countdownCurrentTime = new Date().getTime();
     var countdownDifference = countdownDate - countdownCurrentTime;
@@ -67,11 +68,14 @@ var countdownUpdater = setInterval(function() {
     var countdownMinutes = Math.floor((countdownDifference % (1000 * 60 * 60)) / (1000 * 60));
     var countdownSeconds = Math.floor((countdownDifference % (1000 * 60)) / 1000);
 
-    document.getElementById("countdown").innerHTML = countdownDays + "d " + countdownHours + "h " + countdownMinutes + "m " + countdownSeconds + "s";
+    var countdown = countdownDays + "d " + countdownHours + "h " + countdownMinutes + "m " + countdownSeconds + "s"
+    var countdownCompletionMessage = "TODAY! HAPPY BIRTHDAY, MATTHEW!"
+
+    countdownElement.innerHTML = countdown;
 
     if (countdownDifference < 0) {
         clearInterval(countdownCurrentTime);
-        document.getElementById("countdown").innerHTML = "TODAY! HAPPY BIRTHDAY, MATTHEW!";
+        countdownElement.innerHTML = countdownCompletionMessage;
     }
 }, 1000);
 
