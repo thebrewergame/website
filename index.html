@@ -67,7 +67,7 @@ var countdownUpdater = setInterval(function() {
     var countdownMinutes = Math.floor((countdownDifference % (1000 * 60 * 60)) / (1000 * 60));
     var countdownSeconds = Math.floor((countdownDifference % (1000 * 60)) / 1000);
 
-    var countdown = countdownDays + "d " + countdownHours + "h " + countdownMinutes + "m " + countdownSeconds + "s"
+    var countdown = countdownDays + " days, " + countdownHours + " hours, " + countdownMinutes + " minutes, " + countdownSeconds + " seconds"
     var countdownCompletionMessage = "TODAY! HAPPY BIRTHDAY, MATTHEW!"
 
     countdownElement.innerHTML = countdown;
