@@ -14,6 +14,14 @@ h1{
     font-weight: 600; /*Make the text bold*/
 }
 
+main>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 button {
     display: flex;
     align-items: center;
@@ -27,8 +35,8 @@ button {
     background-color: rgb(218, 218, 218);
     border-radius: 8px; /*Makes the buttons round*/
     text-align: center; /*Aligns text to the ceneter. Avoid center aligned text for paragraphs. They're mainly used for buttons*/
-    padding: 3px; /*Add 8 pixels of padding between the corners of the element and the content of it to make it feel less cramped*/
-    margin: 0px; /*Adds 4 pixels of margin, as in, blank space around the element to space other items apart*/
+    padding: 8px; /*Add 8 pixels of padding between the corners of the element and the content of it to make it feel less cramped*/
+    margin: 4px; /*Adds 4 pixels of margin, as in, blank space around the element to space other items apart*/
     text-decoration: none; /*Removes the underline from the link now that they look like buttons*/
     transition: 0.2s linear background-color; /*Add a transition when someone hovers over the button*/
     border:none;
@@ -187,11 +195,11 @@ code goes here
     }
 
     .announcementBanner {
-        width: 80vw;
+        width: 80vw; /*A value of 80 aligns the width with the blurb*/
         height: 20vh;
     }
 
-    button{
+    .emailButton {
         display: none;
     }
   }
