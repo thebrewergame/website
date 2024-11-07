@@ -1,6 +1,6 @@
 # thebrewergame.com
 
-Hi there! This repository is the source code for thebrewergame.com, developed by Matthew Brewer, known online as thebrewergame. thebrewergame.com is Matthew's personal website running off Cloudflare Pages from this repository. If you'd like to get in touch with Matthew, the best way to do so is by [sending an email his way](mailto:matt@thebrewergame.com).
+Hi there! This repository is the source code for thebrewergame.com, developed by Matthew Brewer, known online as thebrewergame. thebrewergame.com is Matthew's personal website running off Cloudflare Pages from this repository. If you'd like to get in touch with Matthew, the best way to do so is by [sending an email his way](mailto:brewer@thebrewergame.com).
 
 > [!TIP]
 > `source.thebrewergame.com` redirects here. Feel free to use this link if you'd like a quick way to access this GitHub repository.
