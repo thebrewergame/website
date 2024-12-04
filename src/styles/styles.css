@@ -109,7 +109,7 @@ a:hover{
 
 .announcementBanner {
   width: 30vw; /*A value of 50 aligns the width with the blurb*/
-  height: 15vh;
+  height: 20vh;
   border:none;
   padding: 8px;
   padding-left: 18px;
@@ -140,6 +140,16 @@ h5 {
     margin-top: 0px;
     padding-top: 0px;
     padding-bottom: 0px;
+}
+
+.announcementContent {
+    text-align: center;
+    display: block;
+    margin-block-start: 0.2em;
+    margin-block-end: 1.2em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
 }
 
 /*Classes, as in class=(name) in HTML, are refered to in CSS using a full stop (.)
@@ -196,7 +206,12 @@ code goes here
 
     .announcementBanner {
         width: 80vw; /*A value of 80 aligns the width with the blurb*/
-        height: 20vh;
+        height: 27vh;
+    }
+
+    .announcementContent {
+        margin-block-start: .5em;
+        margin-block-end: 1.5em;
     }
 
     .emailButton {

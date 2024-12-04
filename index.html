@@ -26,15 +26,16 @@
         <br>
         <h4>Find me elsewhere across the internet:</h4>
         <div> <!--Put the links in a separate container, that way we can align them in a row. Target=_blank rel noopener opens the link in a new tab.-->
+            <a href="https://writingsof.matthewcbrewer.com" target="_blank" rel="noopener">The Writings of Matthew Brewer</a>
             <a href="https://bsky.app/profile/thebrewergame.com" target="_blank" rel="noopener">Bluesky</a>
         </div>
         <br>
         <div class="announcementBanner">
-            <h5 id="announcementTagline">ANOTHER YEAR CLOSER TO DEATH</h5>
-            <h2 id="announcementHeader">MATTHEW'S BIRTHDAY IS IN:</h2>
-            <p id="announcementContent"></p>
+            <h5 id="announcementTagline">THE WRITINGS OF MATTHEW BREWER</h5>
+            <h2 id="announcementHeader">How Bluesky Works</h2>
+            <p id="announcementContent" class="announcementContent">With help from my friend Jack, I explain, for the average person, how things work on Bluesky in the first installment of my new blog.</p>
             <div id="announcementActions">
-                
+                <a href="https://writingsof.matthewcbrewer.com/p/how-bluesky-works" target="_blank" rel="noopener">Read now</a>
             </div>
         </div>
     </footer>
@@ -59,37 +60,6 @@ function copyEmail() {
         emailButtonIcon.src = emailButtonCopyIcon;
         emailButtonIcon.alt = emailButtonCopyIconAltText
     }, 2000)
-}
-
-var countdownDate = new Date("Dec 4, 2024 00:00:00").getTime();
-var countdownElement = document.getElementById("announcementContent")
-var countdownUpdater = setInterval(function() {
-    var countdownCurrentTime = new Date().getTime();
-    var countdownDifference = countdownDate - countdownCurrentTime;
-
-    var countdownDays = Math.floor(countdownDifference / (1000 * 60 * 60 * 24));
-    var countdownHours = Math.floor((countdownDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var countdownMinutes = Math.floor((countdownDifference % (1000 * 60 * 60)) / (1000 * 60));
-    var countdownSeconds = Math.floor((countdownDifference % (1000 * 60)) / 1000);
-
-    var countdown = countdownDays + "d " + countdownHours + "h " + countdownMinutes + "m " + countdownSeconds + "s"
-    var countdownCompletionMessage = "TODAY! HAPPY BIRTHDAY, MATTHEW!"
-
-    countdownElement.innerHTML = countdown;
-
-    if (countdownDifference < 0) {
-        clearInterval(countdownCurrentTime);
-        countdownElement.innerHTML = countdownCompletionMessage;
-    }
-}, 1000);
-
-function MobileDeterminer() {
-    const userClient = navigator.userAgent;
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userClient);
-}
-
-if (MobileDeterminer()) {
-    document.getElementById("announcementHeader").textContent = "MATTHEW'S BDAY IS IN:"
 }
 
 </script>
