@@ -146,10 +146,35 @@ h5 {
     text-align: center;
     display: block;
     margin-block-start: 0.2em;
-    margin-block-end: 1.2em;
+    margin-block-end: 0.7em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     unicode-bidi: isolate;
+}
+
+.announcementBanner>div {
+    display: flex;
+}
+
+.announcementDismissButton {
+    color: black;
+    background-color: rgb(218, 218, 218);
+    border-radius: 8px; /*Makes the buttons round*/
+    text-align: center; /*Aligns text to the ceneter. Avoid center aligned text for paragraphs. They're mainly used for buttons*/
+    padding: 8px; /*Add 8 pixels of padding between the corners of the element and the content of it to make it feel less cramped*/
+    margin: 4px; /*Adds 4 pixels of margin, as in, blank space around the element to space other items apart*/
+    text-decoration: none; /*Removes the underline from the link now that they look like buttons*/
+    transition: 0.2s linear background-color; /*Add a transition when someone hovers over the button*/
+    border:none;
+    font-family: Jost, sans-serif;
+    font-size: 1em;
+}
+
+.announcementDismissButton:hover { 
+    cursor:pointer;
+    background-color: rgb(178, 178, 178); /*When someone hovers over the link, make the background color darker*/
+    transition: 0.2s linear all;
+    color: black;
 }
 
 /*Classes, as in class=(name) in HTML, are refered to in CSS using a full stop (.)
@@ -210,8 +235,8 @@ code goes here
     }
 
     .announcementContent {
-        margin-block-start: .5em;
-        margin-block-end: 1.5em;
+        margin-block-start: .3em;
+        margin-block-end: .5em;
     }
 
     .emailButton {

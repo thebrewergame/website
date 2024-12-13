@@ -30,12 +30,13 @@
             <a href="https://bsky.app/profile/thebrewergame.com" target="_blank" rel="noopener">Bluesky</a>
         </div>
         <br>
-        <div class="announcementBanner">
+        <div class="announcementBanner" id="announcementBanner">
             <h5 id="announcementTagline">THE WRITINGS OF MATTHEW BREWER</h5>
             <h2 id="announcementHeader">How Bluesky Works</h2>
             <p id="announcementContent" class="announcementContent">With help from my friend Jack, I explain, for the average person, how things work on Bluesky in the first installment of my new blog.</p>
             <div id="announcementActions">
                 <a href="https://writingsof.matthewcbrewer.com/p/how-bluesky-works" target="_blank" rel="noopener">Read now</a>
+                <button type=button id="announcementDismissButton" class="announcementDismissButton" onclick="dismissAnnouncement()" title="Dismiss announcement"><img src="/src/images/icons/close.png" alt="Black close icon" width="24" height="24"></button>
             </div>
         </div>
     </footer>
@@ -60,6 +61,15 @@ function copyEmail() {
         emailButtonIcon.src = emailButtonCopyIcon;
         emailButtonIcon.alt = emailButtonCopyIconAltText
     }, 2000)
+}
+
+function dismissAnnouncement() {
+    var announcementBanner = document.getElementById("announcementBanner")
+    if (announcementBanner.style.display === "none") {
+        announcementBanner.style.display = "block"
+    } else {
+        announcementBanner.style.display = "none"
+    }
 }
 
 </script>
