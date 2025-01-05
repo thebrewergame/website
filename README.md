@@ -8,3 +8,5 @@ Hi there! This repository is the source code for thebrewergame.com, developed by
 ## Utmost thanks
 
 [Adnan "Aridan" Bukvic](https://aridan.net/), aka actuallyaridan, for making the site possible by modernizing and improving the initial code and pulling it out of 1992 in appearance
+
+Google, for providing the original iconography throughout the website as part of their [Material Symbols](https://fonts.google.com/icons).
