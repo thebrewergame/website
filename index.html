@@ -30,6 +30,7 @@
             <a href="https://x.com/thebrewergame" target="_blank" rel="noopener">X (formerly Twitter)</a>
             <a href="https://bsky.app/profile/thebrewergame.com" target="_blank" rel="noopener">Bluesky</a>
         </div>
+        <button type=button class="fediverseButton" onclick="fediverseAlert()">Looking for the fediverse?</button>
         <!--<br>-->
         <div class="announcementBanner" id="announcementBanner">
             <h5 id="announcementTagline">THE WRITINGS OF MATTHEW BREWER</h5>
@@ -64,10 +65,17 @@ function copyEmail() {
     }, 2000)
 }
 
+function fediverseAlert() {
+    var alertMessage = "While I don't frequent the fediverse myself, my Bluesky account is streamed over the rainbow protocol bridge at @thebrewergame.com@bsky.brid.gy. Follow me there on your fediverse platform of choice, and consider enabling the bridge back to Bluesky by following @bsky.brid.gy@bsky.brid.gy yourself so I can see and interact with you!"
+    
+    alert(alertMessage)
+}
+
 function dismissAnnouncement() {
     var announcementBanner = document.getElementById("announcementBanner")
+    
     if (announcementBanner.style.display === "none") {
-        announcementBanner.style.display = "block"
+        announcementBanner.style.display = "flex"
     } else {
         announcementBanner.style.display = "none"
     }
