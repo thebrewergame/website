@@ -116,6 +116,7 @@ a:hover{
     color: #069;
     text-decoration: underline;
     cursor: pointer;
+    display: none;
 }
 
 .announcementBanner {
