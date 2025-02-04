@@ -114,3 +114,37 @@ if (MobileDeterminer()) {
 ```
 
 To adjust an element of the website based on if they're on mobile, put the changes inside the `if` statement. In the code above, it's set to adjust the content of the `announcementHeader` to "MATTHEW'S BDAY IS IN:".
+
+### Additional Unstyled Social Link/Fediverse Button
+
+An additional, unstyled social link was developed to sit just below the primary social links' `<div>` originally for the fediverse. When pressed, the button (which is styled to appear as an unstyled link) triggers a browser `alert()`. There are three components to it. First, the actual button, which sits right below the social links' `<div>`, above the announcement banner's `<br>`. When it was originally developed, this is what the button looked like:
+
+```
+<button type=button class="fediverseButton" onclick="fediverseAlert()">Looking for the fediverse?</button>
+```
+
+Then, the scripting was located in the `<script>` section of `index.html`:
+
+```
+function fediverseAlert() {
+    var alertMessage = "While I don't frequent the fediverse myself, my Bluesky account is streamed over the rainbow protocol bridge at @thebrewergame.com@bsky.brid.gy. Follow me there on your fediverse platform of choice, and consider enabling the bridge back to Bluesky by following @bsky.brid.gy@bsky.brid.gy yourself so I can see and interact with you!"
+    
+    alert(alertMessage)
+}
+```
+
+Finally, to style the button to appear as an unstyled link, the following CSS was included in `/src/styles/styles.css` just above the announcement banner's CSS:
+
+```
+.fediverseButton {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 0;
+    color: #069;
+    text-decoration: underline;
+    cursor: pointer;
+    display: none;
+}
+```
