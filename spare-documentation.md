@@ -5,7 +5,7 @@ Howdy! This file is the official documentation of the spare bits of code written
 - "Stylesheet" / "CSS file" --> /src/styles/styles.css
 - "Main page" / "Main code" / "Main page code" --> /index.html
 
-The list below is organized in descending order of appearance on the website.
+The list below is organized in descending order of development.
 
 ### Colored Social Links
 
