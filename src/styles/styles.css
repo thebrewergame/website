@@ -3,13 +3,13 @@
     src: url(/src/styles/fonts/Jost.ttf); /*Get the font from here*/
 }
 
-html, body{
+html, body {
     background-color: rgb(255, 255, 255); /*Sets the background color of the website*/
-    font-family: Jost, sans-serif; /*Sets the whole site so use the font Jost, if it can't find it, it'll use a sans-serif font proivded by the browser instead*/
-    color: rgb(0, 0, 0); /*Set the text color of the website to black*/
+    font-family: Jost, sans-serif; /*Sets the whole site to use the font Jost, if it can't find it, it'll use a sans-serif font provided by the browser instead*/
+    color: rgb(0, 0, 0); /*Sets the text color of the website to black*/
 }
 
-h1{
+h1 {
     text-align: center; /*Use center aligned text*/
     font-weight: 600; /*Make the text bold*/
 }
@@ -30,50 +30,49 @@ button {
     flex-wrap: wrap; /*Tells the browser to wrap the content*/
 }
 
-.emailButton {
+#emailButton {
     color: black;
     background-color: rgb(218, 218, 218);
     border-radius: 8px; /*Makes the buttons round*/
-    text-align: center; /*Aligns text to the ceneter. Avoid center aligned text for paragraphs. They're mainly used for buttons*/
+    text-align: center; /*Aligns text to the center. Avoid center aligned text for paragraphs. They're mainly used for buttons*/
     padding: 8px; /*Add 8 pixels of padding between the corners of the element and the content of it to make it feel less cramped*/
     margin: 4px; /*Adds 4 pixels of margin, as in, blank space around the element to space other items apart*/
     text-decoration: none; /*Removes the underline from the link now that they look like buttons*/
-    transition: 0.2s linear background-color; /*Add a transition when someone hovers over the button*/
+    transition: 0.2s linear background-color; /*Adds a transition when someone hovers over the button*/
     border:none;
     font-family: Jost, sans-serif;
     font-size: 1em;
 }
 
-.emailButton:hover { 
+#emailButton:hover { 
     cursor:pointer;
     background-color: rgb(178, 178, 178); /*When someone hovers over the link, make the background color darker*/
     transition: 0.2s linear all;
     color: black;
 }
 
-h4{
+h4 {
     font-weight: 500; /*Make the text bold*/
 }
 
-body{
+body {
     display: flex; /*Set the body element as a flexable container*/
-    align-items: center; /*Align the items towards the center*/
-    justify-content: center; /*Justify the content towards the center, as in, horizontal centering*/
+    align-items: center; /*Align the items toward the center*/
+    justify-content: center; /*Justify the content toward the center, as in, horizontal centering*/
     flex-direction: column; /*Display the items in a column*/
     width: 50vw; /*Set the width of the site to 50 percent of the screens width*/
     margin: auto;
 
 }
 
-main{
-
+main {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-footer{
+footer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,7 +81,7 @@ footer{
     flex-wrap: wrap;
 }
 
-footer>div{ /*Adds styles for the links in the footer*/
+footer>div { /*Adds styles for the links in the footer*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -90,7 +89,7 @@ footer>div{ /*Adds styles for the links in the footer*/
     flex-wrap: wrap; /*Tells the browser to wrap the content*/
 }
 
-a{
+a {
     color: black;
     background-color: rgb(218, 218, 218);
     border-radius: 8px; /*Makes the buttons round*/
@@ -98,16 +97,16 @@ a{
     padding: 8px; /*Add 8 pixels of padding between the corners of the element and the content of it to make it feel less cramped*/
     margin: 4px; /*Adds 4 pixels of margin, as in, blank space around the element to space other items apart*/
     text-decoration: none; /*Removes the underline from the link now that they look like buttons*/
-    transition: 0.2s linear background-color; /*Add a transition when someone hovers over the button*/
+    transition: 0.2s linear background-color; /*Adds a transition when someone hovers over the button*/
 }
 
-a:hover{
+a:hover {
     background-color: rgb(178, 178, 178); /*When someone hovers over the link, make the background color darker*/
     transition: 0.2s linear all;
     color: black;
 }
 
-.announcementBanner {
+#announcementBanner {
   width: 28vw; /*A value of 50 aligns the width with the blurb*/
   height: 13vh;
   border:none;
@@ -143,7 +142,7 @@ h5 {
     padding-bottom: 0px;
 }
 
-.announcementContent {
+#announcementContent {
     display: block;
     margin-block-start: 0.2em;
     margin-block-end: 0.7em;
@@ -152,11 +151,11 @@ h5 {
     unicode-bidi: isolate;
 }
 
-.announcementBanner>div {
+#announcementBanner>div {
     display: flex;
 }
 
-.announcementDismissButton {
+#announcementDismissButton {
     color: black;
     background-color: rgb(218, 218, 218);
     border-radius: 8px; /*Makes the buttons round*/
@@ -164,64 +163,17 @@ h5 {
     padding: 8px; /*Add 8 pixels of padding between the corners of the element and the content of it to make it feel less cramped*/
     margin: 4px; /*Adds 4 pixels of margin, as in, blank space around the element to space other items apart*/
     text-decoration: none; /*Removes the underline from the link now that they look like buttons*/
-    transition: 0.2s linear background-color; /*Add a transition when someone hovers over the button*/
+    transition: 0.2s linear background-color; /*Adds a transition when someone hovers over the button*/
     border:none;
     font-family: Jost, sans-serif;
     font-size: 1em;
 }
 
-.announcementDismissButton:hover { 
+#announcementDismissButton:hover { 
     cursor:pointer;
     background-color: rgb(178, 178, 178); /*When someone hovers over the link, make the background color darker*/
     transition: 0.2s linear all;
     color: black;
-}
-
-/*Classes, as in class=(name) in HTML, are refered to in CSS using a full stop (.)
-Multiple elemenrs can share the same class name if you'd like to.
-
-However, if you were to use IDs, as in id=(name) in HTML, yoou can't have two ids with the same name on one page. 
-IDs are refered to using hashtags (#) in CSS.
-
-.classname{
-code goes here
-}
-
-#idname{
-code goes here
-}
-
-
-*/
-
-.twitter{
-    background-color: #008AD8;
-    color: white;
-}
-
-.instagram{
-    background-color: #F56040;
-    color: white;
-}
-
-.substack{
-    background-color: #FF6719;
-    color: white;
-}
-
-.airchat{
-    background-color: #3170e7;
-    color: white;
-}
-
-.youtube{
-    background-color: #FF0000;
-    color: white;
-}
-
-.twitch{
-    background-color: #6441a5;
-    color: white;
 }
 
 @media only screen and (max-width: 600px) { /*When the users screen is smaller than 600px (as in, for phones), make the width of the site 80% of the sceeens width*/
@@ -229,17 +181,17 @@ code goes here
       width: 80vw;
     }
 
-    .announcementBanner {
+    #announcementBanner {
         width: 80vw; /*A value of 80 aligns the width with the blurb*/
         height: 24vh;
     }
 
-    .announcementContent {
+    #announcementContent {
         margin-block-start: .3em;
         margin-block-end: .5em;
     }
 
-    .emailButton {
+    #emailButton {
         display: none;
     }
   }

@@ -9,19 +9,7 @@ The list below is organized in descending order of development.
 
 ### Colored Social Links
 
-In thebrewergame.com v1.8, actuallyaridan added code to color the background of each social link in the site's footer. This coloring was achieved with HTML classes that defined the primary color for each platform the footer displayed at the time in the stylesheet that the links in the main page then called upon. While the colors were removed in the subsequent release, thebrewergame.com v1.9, all of the original HTML classes remain near the bottom of the stylesheet and can be reattached to their respective links by adding back the corresponding `class` values. For example, take this link to my Twitter profile:
-
-```
-<a href="https://x.com/thebrewergame" target="_blank" rel="noopener">X (formerly Twitter)</a>
-```
-
-The link tag above creates a link to my Twitter profile, thebrewergame, which appears as "X (formerly Twitter)" and opens in a new tab in the browser. This link would appear visually consistent with what the stylesheet has defined for links on the website. However, if you wanted to add back the Twitter blue brand color background to the link, the link would need to appear like this:
-
-```
-<a href="https://x.com/thebrewergame" target="_blank" rel="noopener" class="twitter">X (formerly Twitter)</a>
-```
-
-This link tag creates a link to my Twitter profile, thebrewergame, which appears as "X (formerly Twitter)", opens in a new tab in the browser, and uses Twitter's signature blue as the link background, which is defined in the stylesheet. For reference and archiving purposes, these are all of the original HTML classes:
+In thebrewergame.com v1.8, actuallyaridan added code to color the background of each social link in the site's footer. This coloring was achieved with HTML classes that defined the primary color for each platform the footer displayed at the time in the stylesheet that the links in the main page then called upon. While the colors were removed in the subsequent release, thebrewergame.com v1.9, all of the original HTML classes remained near the bottom of the stylesheet until thebrewergame.com v2. For reference and archiving purposes, these are all of the original HTML classes and how to reattach them to their links:
 
 ```
 .twitter{
@@ -55,9 +43,42 @@ This link tag creates a link to my Twitter profile, thebrewergame, which appears
 }
 ```
 
+To reattach the classes to their respective links, add back the corresponding `class` values. For example, take this link to my Twitter profile:
+
+```
+<a href="https://x.com/thebrewergame" target="_blank" rel="noopener">X (formerly Twitter)</a>
+```
+
+The link tag above creates a link to my Twitter profile, thebrewergame, which appears as "X (formerly Twitter)" and opens in a new tab in the browser. This link would appear visually consistent with what the stylesheet has defined for links on the website. However, if you wanted to add back the Twitter blue brand color background to the link, the link would need to appear like this:
+
+```
+<a href="https://x.com/thebrewergame" target="_blank" rel="noopener" class="twitter">X (formerly Twitter)</a>
+```
+
+This link tag creates a link to my Twitter profile, thebrewergame, which appears as "X (formerly Twitter)", opens in a new tab in the browser, and uses Twitter's signature blue as the link background, which is defined in the stylesheet. Additionally, see below for actuallyaridan's original code comments about these classes and how they work:
+
+```
+/*Classes, as in class=(name) in HTML, are refered to in CSS using a full stop (.)
+Multiple elemenrs can share the same class name if you'd like to.
+
+However, if you were to use IDs, as in id=(name) in HTML, yoou can't have two ids with the same name on one page. 
+IDs are refered to using hashtags (#) in CSS.
+
+.classname{
+code goes here
+}
+
+#idname{
+code goes here
+}
+
+
+*/
+```
+
 ### Announcement Banner
 
-thebrewergame.com v1.18 introduced the announcement banner, a handy tool that can be used to promote something specific underneath the social links in the website's footer. It offers space for a header, additional tagline, content, and a few actions, like a link to another website. The banner's code can be identified in the main page code and the stylesheet by the HTML class "announcementBanner" as of thebrewergame.com v1.49. In versions of thebrewergame.com before 1.49, the HTML class was "announcement-banner". Since version 1.49 and onward, each individual element of the announcement banner has its own HTML ID that allows them to be called upon in other parts of the code. In descending order of appearance, these IDs are:
+thebrewergame.com v1.18 introduced the announcement banner, a handy tool that can be used to promote something specific underneath the social links in the website's footer. It offers space for a header, additional tagline, content, and a few actions, like a link to another website. The banner's code can be identified in the main page code and the stylesheet by the HTML ID "announcementBanner" as of thebrewergame.com v2. In versions of thebrewergame.com before v2, the HTML ID was instead an HTML class of the same name. In versions of thebrewergame.com before v1.49, the HTML class was "announcement-banner". In thebrewergame.com v1.49 and onward, each individual element of the announcement banner has its own HTML ID that allows them to be called upon in other parts of the code. In descending order of appearance, these IDs are:
 
 ```
 announcementTagline
@@ -66,7 +87,7 @@ announcementContent
 announcementActions
 ```
 
-To take the banner live once the content has been appropriately filled in the main page and the sizing adequately adjusted in the stylesheet, remove the comment tags surrounding the `<br>` just above the banner's container, and remove or comment out the `display: none;` at the bottom of the announcement banner class' entry in the stylesheet. This will reveal the banner, and add a little extra spacing in between it and the social links above it.
+To take the banner live once the content has been appropriately filled in the main page and the sizing adequately adjusted in the stylesheet, remove the comment tags surrounding the `<br>` just above the banner's container, and remove or comment out the `display: none;` at the bottom of the announcement banner ID (or class)'s entry in the stylesheet. This will reveal the banner, and add a little extra spacing in between it and the social links above it.
 
 ### Countdown
 
