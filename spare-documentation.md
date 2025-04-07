@@ -91,10 +91,10 @@ To take the banner live once the content has been appropriately filled in the ma
 
 ### Countdown
 
-thebrewergame.com v1.49 also brought in code for a countdown ahead of Matthew's birthday on December 4, 2024. To use it, copy the block of JavaScript code below from when it was first used into the `<script>` section of the main page, and go through the list of steps underneath to set it up.
+thebrewergame.com v1.49 also brought in code for a countdown ahead of my birthday on December 4, 2024. To use it, copy the block of JavaScript code below from when it was first used into the `<script>` section of the main page, and go through the list of steps underneath to set it up.
 
 ```
-var countdownDate = new Date("Dec 4, 2024 00:00:00").getTime();
+var countdownDate = new Date("December 4, 2024 00:00:00 -0600").getTime();
 var countdownElement = document.getElementById("announcementContent")
 var countdownUpdater = setInterval(function() {
     var countdownCurrentTime = new Date().getTime();
@@ -111,13 +111,17 @@ var countdownUpdater = setInterval(function() {
     countdownElement.innerHTML = countdown;
 
     if (countdownDifference < 0) {
-        clearInterval(countdownCurrentTime);
+        clearInterval(countdownUpdater);
         countdownElement.innerHTML = countdownCompletionMessage;
     }
 }, 1000);
 ```
 
-First, define the date the countdown will be ticking down to with the variable `countdownDate`. In the code above, this date is Dec 4, 2024. Once the date is defined, specify the element of the website the countdown is supposed to appear in with the variable `countdownElement`. Once you've done that, make sure to configure a relevant message to be displayed when the countdown is completed with the variable `countdownCompletionMessage`, and you're all set! Now, you have a countdown that includes days, hours, minutes, and seconds. If you want to customize what the countdown actually shows, such as by only displaying days and hours, you can do so with the `countdown` variable.
+First, define the date the countdown will be ticking down to with the variable `countdownDate`. In the code above, the date is midnight CST on `December 4, 2024`. Next, specify the element of the website the countdown is to appear in with the variable `countdownElement`. Finally, set a message to show in place of the countdown when it finishes in the variable `countdownCompletionMessage`. Customize the countdown string itself with the `countdown` variable. A couple additional notes:
+
+- The time of day is in 24 hour format, HOUR:MINUTE:SECOND.
+- Append a UTC offset to specify the timezone. If you don't specify one, the countdown will go to the time in the user's local timezone.
+- `-0600` is the UTC offset for CST. `-0500` is CDT. Avoid specifying a timezone outside of its UTC offset.
 
 ### Mobile Determiner Function
 
