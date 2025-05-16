@@ -85,6 +85,8 @@ announcementTagline
 announcementHeader
 announcementContent
 announcementActions
+announcementActionButton
+announcementDismissButton
 ```
 
 To take the banner live once the content has been appropriately filled in the main page and the sizing adequately adjusted in the stylesheet, remove the comment tags surrounding the `<br>` just above the banner's container, and remove or comment out the `display: none;` at the bottom of the announcement banner ID (or class)'s entry in the stylesheet. This will reveal the banner, and add a little extra spacing in between it and the social links above it.

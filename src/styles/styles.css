@@ -107,8 +107,8 @@ a:hover {
 }
 
 #announcementBanner {
-  width: 28vw; /*A value of 50 aligns the width with the blurb*/
-  height: 13vh;
+  width: 25vw; /*A value of 50 aligns the width with the blurb*/
+  height: 22vh;
   border:none;
   padding: 8px;
   padding-left: 18px;
@@ -124,7 +124,7 @@ a:hover {
   flex-wrap: wrap; /*Tells the browser to wrap the content*/
   border-radius: 8px;
   background-color: rgb(237,237,237);
-  display: none;
+  /*display: none;*/
 }
 
 h2 {
@@ -183,7 +183,7 @@ h5 {
 
     #announcementBanner {
         width: 80vw; /*A value of 80 aligns the width with the blurb*/
-        height: 24vh;
+        height: 26vh;
     }
 
     #announcementContent {
