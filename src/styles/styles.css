@@ -62,7 +62,6 @@ body {
     flex-direction: column; /*Display the items in a column*/
     width: 50vw; /*Set the width of the site to 50 percent of the screens width*/
     margin: auto;
-
 }
 
 main {
