@@ -81,6 +81,7 @@ code goes here
 thebrewergame.com v1.18 introduced the announcement banner, a handy tool that can be used to promote something specific underneath the social links in the website's footer. It offers space for a header, additional tagline, content, and a few actions, like a link to another website. The banner's code can be identified in the main page code and the stylesheet by the HTML ID "announcementBanner" as of thebrewergame.com v2. In versions of thebrewergame.com before v2, the HTML ID was instead an HTML class of the same name. In versions of thebrewergame.com before v1.49, the HTML class was "announcement-banner". In thebrewergame.com v1.49 and onward, each individual element of the announcement banner has its own HTML ID that allows them to be called upon in other parts of the code. In descending order of appearance, these IDs are:
 
 ```
+announcementVisualSeparator
 announcementTagline
 announcementHeader
 announcementContent
