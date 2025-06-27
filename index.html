@@ -45,7 +45,7 @@
             <a href="https://x.com/thebrewergame" target="_blank" rel="noopener">X (formerly Twitter)</a>
             <a href="https://writingsof.matthewcbrewer.com" target="_blank" rel="noopener">The Writings of Matthew Brewer</a>
         </div>
-        <br id="announcementVisualSeparator">
+        <!--<br id="announcementVisualSeparator">-->
         <div id="announcementBanner">
             <h5 id="announcementTagline">COUNTDOWN TO SURGERY</h5>
             <h2 id="announcementHeader">Surgery</h2>
@@ -78,30 +78,6 @@ function copyEmail() {
         emailButtonIcon.alt = emailButtonCopyIconAltText
     }, 2000)
 }
-
-var countdownDate = new Date("July 1, 2025 09:45:00 -0500").getTime();
-var countdownElement = document.getElementById("announcementHeader")
-var countdownUpdater = setInterval(function() {
-    var countdownCurrentTime = new Date().getTime();
-    var countdownDifference = countdownDate - countdownCurrentTime;
-
-    var countdownDays = Math.floor(countdownDifference / (1000 * 60 * 60 * 24));
-    var countdownHours = Math.floor((countdownDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var countdownMinutes = Math.floor((countdownDifference % (1000 * 60 * 60)) / (1000 * 60));
-    var countdownSeconds = Math.floor((countdownDifference % (1000 * 60)) / 1000);
-
-    var countdown = countdownDays + "d " + countdownHours + "h " + countdownMinutes + "m " + countdownSeconds + "s"
-    var countdownCompletionMessage = "Surgery ongoing"
-
-    countdownElement.innerHTML = countdown;
-
-    if (countdownDifference < 0) {
-        clearInterval(countdownUpdater);
-        countdownElement.innerHTML = countdownCompletionMessage;
-        document.getElementById("announcementContent").innerHTML = "I'm currently undergoing surgery on my Achilles tendon. Read about the details of what I'm in the OR for on my blog."
-        document.getElementById("announcementActionButton").innerHTML = "Read blog post"
-    }
-}, 1000);
 
 function dismissAnnouncement() {
     var announcementBanner = document.getElementById("announcementBanner")
