@@ -31,7 +31,7 @@
     </header>
     <main> <!--Main contains the main content a person is looking for-->
         <img src="/src/images/portrait.jpg" alt="A photo of Matthew Brewer outside, up against a tree, wearing a blue hoodie and black t-shirt underneath a navy and red vest, and a blue and orange hat with a colored Jet Lag: The Game logo. The background is blurred, and Matthew's glasses are tinted brown." width="350" height="450">
-        <p>It's great to meet you. From a young age, I've always had a passion for technology, writing, the outdoors, and public speaking. Some around me have said I'd make a great lawyer, but I've been more interested in the hospitality industry from traveling the country with my family when I was younger. I aim to join the next generation of receptionists, and one day, I might just be the one greeting you from opposite the hotel front desk. Outside that, I write in my blog and occasionally dabble in various other interests of mine, from photography and videography to announcements work and web development.</p>
+        <p>It's great to meet you. From a young age, I've always had a passion for technology, writing, the outdoors, and public speaking. Some around me have said that I'd make a great lawyer, but I've been more interested in the hospitality industry since traveling the country with my family when I was younger. I aim to join the next generation of receptionists, and one day, I might just be the one greeting you from opposite the hotel front desk. Outside of that, I write in my blog and occasionally dabble in various other interests, including photography and videography, announcement voice work, and web development.</p>
         <div>
             <a href="mailto:brewer@thebrewergame.com" target="_blank" rel="noopener">Say hi, or get in touch via email</a>
             <button type=button id="emailButton" onclick="copyEmail()" title="Copy email address to the clipboard"><img src="/src/images/icons/copy.png" id="emailButtonIcon" alt="Black copy icon" width="24" height="24"></button>
@@ -45,13 +45,13 @@
             <a href="https://x.com/thebrewergame" target="_blank" rel="noopener">X (formerly Twitter)</a>
             <a href="https://bsky.app/profile/thebrewergame.com" target="_blank" rel="noopener">Bluesky</a>
         </div>
-        <!--<br id="announcementVisualSeparator">-->
+        <br id="announcementVisualSeparator">
         <div id="announcementBanner">
-            <h5 id="announcementTagline">BLOG</h5>
-            <h2 id="announcementHeader">Removal</h2>
-            <p id="announcementContent">Read the fourth post of my personal blog now.</p>
+            <h5 id="announcementTagline">BIRTHDAY COUNTDOWN</h5>
+            <h2 id="announcementHeader">[Countdown]</h2>
+            <p id="announcementContent">The countdown is on to my eighteenth birthday on December 4! Come back then for the release of a brand new blog post.</p>
             <div id="announcementActions">
-                <a href="https://blog.matthewcbrewer.com/removal" id="announcementActionButton" target="_blank" rel="noopener">Read now</a>
+                <a href="https://blog.matthewcbrewer.com/birthday-traditions" id="announcementActionButton" target="_blank" rel="noopener">Read now</a>
                 <button type=button id="announcementDismissButton" onclick="dismissAnnouncement()" title="Dismiss announcement"><img src="/src/images/icons/close.png" alt="Black close icon" width="24" height="24"></button>
             </div>
         </div>
@@ -78,6 +78,33 @@ function copyEmail() {
         emailButtonIcon.alt = emailButtonCopyIconAltText
     }, 2000)
 }
+
+var countdownDate = new Date("December 4, 2025 00:00:00 -0600").getTime();
+var countdownElement = document.getElementById("announcementHeader")
+var countdownUpdater = setInterval(function() {
+    var countdownCurrentTime = new Date().getTime();
+    var countdownDifference = countdownDate - countdownCurrentTime;
+
+    var countdownDays = Math.floor(countdownDifference / (1000 * 60 * 60 * 24));
+    var countdownHours = Math.floor((countdownDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var countdownMinutes = Math.floor((countdownDifference % (1000 * 60 * 60)) / (1000 * 60));
+    var countdownSeconds = Math.floor((countdownDifference % (1000 * 60)) / 1000);
+
+    var countdown = countdownDays + "d " + countdownHours + "h " + countdownMinutes + "m " + countdownSeconds + "s"
+    var countdownCompletionMessage = "Today's my birthday!"
+
+    countdownElement.innerHTML = countdown;
+
+    var announcementContent = document.getElementById("announcementContent")
+    var announcementActionButton = document.getElementById("announcementActionButton")
+
+    if (countdownDifference < 0) {
+        clearInterval(countdownUpdater);
+        countdownElement.innerHTML = countdownCompletionMessage;
+        announcementContent.innerHTML = "I'm officially eighteen! Celebrate with me in an all-new blog post telling the magic of my annual birthday dinner, out now."
+        announcementActionButton.style.display = "inline"
+    }
+}, 1000);
 
 function dismissAnnouncement() {
     var announcementBanner = document.getElementById("announcementBanner")
