@@ -126,9 +126,11 @@ a:hover {
   /*display: none;*/
 }
 
+/* Uncomment this to hide the announcement banner's link by default
 #announcementActionButton {
     display: none;
 }
+*/
 
 h2 {
     margin-bottom: 0px;

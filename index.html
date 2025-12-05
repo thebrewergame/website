@@ -47,9 +47,9 @@
         </div>
         <br id="announcementVisualSeparator">
         <div id="announcementBanner">
-            <h5 id="announcementTagline">BIRTHDAY COUNTDOWN</h5>
-            <h2 id="announcementHeader">[Countdown]</h2>
-            <p id="announcementContent">The countdown is on to my eighteenth birthday on December 4! Come back then for the release of a brand new blog post.</p>
+            <h5 id="announcementTagline">BLOG</h5>
+            <h2 id="announcementHeader">Birthday Traditions</h2>
+            <p id="announcementContent">In my final release of the year, I share my favorite birthday tradition in my first annual birthday blog post, out now.</p>
             <div id="announcementActions">
                 <a href="https://blog.matthewcbrewer.com/birthday-traditions" id="announcementActionButton" target="_blank" rel="noopener">Read now</a>
                 <button type=button id="announcementDismissButton" onclick="dismissAnnouncement()" title="Dismiss announcement"><img src="/src/images/icons/close.png" alt="Black close icon" width="24" height="24"></button>
@@ -78,33 +78,6 @@ function copyEmail() {
         emailButtonIcon.alt = emailButtonCopyIconAltText
     }, 2000)
 }
-
-var countdownDate = new Date("December 4, 2025 00:00:00 -0600").getTime();
-var countdownElement = document.getElementById("announcementHeader")
-var countdownUpdater = setInterval(function() {
-    var countdownCurrentTime = new Date().getTime();
-    var countdownDifference = countdownDate - countdownCurrentTime;
-
-    var countdownDays = Math.floor(countdownDifference / (1000 * 60 * 60 * 24));
-    var countdownHours = Math.floor((countdownDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var countdownMinutes = Math.floor((countdownDifference % (1000 * 60 * 60)) / (1000 * 60));
-    var countdownSeconds = Math.floor((countdownDifference % (1000 * 60)) / 1000);
-
-    var countdown = countdownDays + "d " + countdownHours + "h " + countdownMinutes + "m " + countdownSeconds + "s"
-    var countdownCompletionMessage = "Today's my birthday!"
-
-    countdownElement.innerHTML = countdown;
-
-    var announcementContent = document.getElementById("announcementContent")
-    var announcementActionButton = document.getElementById("announcementActionButton")
-
-    if (countdownDifference < 0) {
-        clearInterval(countdownUpdater);
-        countdownElement.innerHTML = countdownCompletionMessage;
-        announcementContent.innerHTML = "I'm officially eighteen! In celebration, I'm sharing my favorite birthday tradition in my first annual birthday blog post, out now."
-        announcementActionButton.style.display = "inline"
-    }
-}, 1000);
 
 function dismissAnnouncement() {
     var announcementBanner = document.getElementById("announcementBanner")
