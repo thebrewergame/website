@@ -1,9 +1,6 @@
 # Matthew Brewer's thebrewergame.com Spare Code Documentation
 
-Howdy! This file is the official documentation of the spare bits of code written and developed for thebrewergame.com that normally go unused. Before jumping in, please take a mental note of the following that will appear regularly throughout this document:
-
-- "Stylesheet" / "CSS file" --> /src/styles/styles.css
-- "Main page" / "Main code" / "Main page code" --> /index.html
+Hello there! This file is the official documentation of the spare bits of code written and developed for thebrewergame.com that are normally unused. Please note that this document includes code for both components that create what you see on thebrewergame.com, `/index.html` (the actual code) and `/src/styles/styles.css` (visual styling/the stylesheet).
 
 The list below is organized in descending order of development.
 
@@ -174,5 +171,43 @@ Finally, to style the button to appear as an unstyled link, the following CSS wa
     text-decoration: underline;
     cursor: pointer;
     display: none;
+}
+```
+
+### Image Link Banner **(Unfinished Prototype)**
+
+**_Note: The code below is an unfinished prototype. It is not ready to be shown on mobile devices. If it is shown, the image will be wider than a phone screen and cause horizontal scrolling on the page. Instructions are included at the bottom of this section to hide the Image Link Banner on mobile devices._**
+
+An image that opens a link when clicked. To use this iteration, first add an image of 600px width by 150px height with the name `imagebanner.png` to `/src/images/`. Then, append the following code below the announcement banner's `<div>`:
+
+```
+<br id="imageBannerVisualSeparator">
+<a href="https://x.com/thebrewergame" target="_blank" rel="noopener" id="imageBannerLink">
+    <img src="/src/images/imagebanner.png" alt="[Alt Text for Image]" id="imageBanner" width="600" height="150">
+</a>
+```
+
+Don't forget to write appropriate alt text for the image! Once you've done that, add the following CSS to the stylesheet below the announcement banner's styling:
+
+```
+#imageBannerLink {
+    background: none;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 0px;
+}
+
+#imageBanner {
+    border-radius: 8px;
+    display: block;
+}
+```
+
+Also, add this CSS to the bottom of the mobile-specific styles (defined under `@media only screen and (max-width: 600px)`) to hide the image link banner on mobile devices:
+
+```
+#imageBanner, #imageBannerVisualSeparator {
+        display: none;
 }
 ```
